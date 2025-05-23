@@ -1,17 +1,13 @@
 $schema: "1.0"
-name: "frontend-dev"
-image: microsoftvisualstudio_visualstudioplustools_vs-2022-ent-general-win11-m365-gen2
-description: "This definition is for the eShop frontend engineering environment"
+name: "dbx-def-windevs-desk"
+image: microsoftwindowsdesktop_windows-ent-cpc_win11-23h2-ent-cpc-m365
+description: "Windows Dev Team Customisations"
 
 tasks:
   - name: winget
+    description: Install Docker Desktop
     parameters:
-      downloadUrl: 'https://raw.githubusercontent.com/contoso-co/common-eng-sys/msft-git/dsc-configurations/common-config.dsc.yaml'
-
-  - name: winget
-    description: Install AZD
-    parameters:
-      package:  Microsoft.Azd
+      package:  Docker.DockerDesktop
 
   - name: winget
     description: Install Visual Studio Code
