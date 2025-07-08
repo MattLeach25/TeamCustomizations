@@ -1,7 +1,7 @@
 # This is a simple powershell command execution task for Dev Box.
 
 $schema: 1.0
-name: powershell
+name: powershell1
 description: Execute a powershell command.
 author: Microsoft Corporation
 command: ".\\testcomplete.ps1"
