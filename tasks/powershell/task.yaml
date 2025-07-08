@@ -4,10 +4,5 @@ $schema: 1.0
 name: powershell
 description: Execute a powershell command.
 author: Microsoft Corporation
-timeout: 3600
+command: ".\\testcomplete.ps1"
 parameters:
-  command:
-    type: string
-    default: ""
-    required: true
-    description: The command to execute.
