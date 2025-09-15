@@ -1,21 +1,29 @@
 $schema: "1.0"
-name: "dbx-def-windevs-desk"
-image: microsoftwindowsdesktop_windows-ent-cpc_win11-23h2-ent-cpc-m365
-description: "Windows Dev Team Customisations"
-
+name: "team-development-environment"
+image: microsoftvisualstudio_visualstudioplustools_vs-2022-ent-general-win11-m365-gen2
 tasks:
-  - name: winget
-    description: Install Notepad++
-    parameters:
-      package:  Notepad++.Notepad++
-
-  - name: winget
+  - name: ~/winget
     description: Install Visual Studio Code
     parameters:
-      package:  Microsoft.VisualStudioCode
-
-  - name: powershell
+      package: Microsoft.VisualStudioCode
+  - name: ~/winget
+    description: Install SQL Express 2022
     parameters:
-      command: |
-        $env:Path = [System.Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [System.Environment]::GetEnvironmentVariable('Path','User') 
-
+      package: Microsoft.SQLServer.2022.Express
+  - name: ~/winget
+    description: Install Git
+    parameters:
+      package: Git.Git
+  - name: ~/winget
+    description: Install .NET SDK 9
+    parameters:
+      package: Microsoft.DotNet.SDK.9
+  - name: ~/winget
+    description: Install Docker Desktop
+    parameters:
+      package: Docker.DockerDesktop
+  - name: ~/git-clone
+    description: Clone the DevBoxAccelerator repository
+    parameters:
+      repositoryUrl: https://github.com/Azure/DevBoxAccelerator.git
+      directory: 'C:\Workspaces'
