@@ -7,10 +7,6 @@ tasks:
     parameters:
       package: Microsoft.VisualStudioCode
   - name: ~/winget
-    description: Install SQL Express 2022
-    parameters:
-      package: Microsoft.SQLServer.2022.Express
-  - name: ~/winget
     description: Install Git
     parameters:
       package: Git.Git
@@ -23,7 +19,8 @@ tasks:
     parameters:
       package: Docker.DockerDesktop
   - name: ~/git-clone
-    description: Clone the DevBoxAccelerator repository
+    description: Clone the MoviesAPI repository
     parameters:
-      repositoryUrl: https://github.com/Azure/DevBoxAccelerator.git
+      repositoryUrl: https://github.com/dotnet/AspNetCore.Docs.git
       directory: 'C:\Workspaces'
+
