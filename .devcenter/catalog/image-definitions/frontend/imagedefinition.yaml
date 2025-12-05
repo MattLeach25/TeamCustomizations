@@ -23,4 +23,12 @@ tasks:
     parameters:
       repositoryUrl: https://github.com/dotnet/AspNetCore.Docs.git
       directory: 'C:\Workspaces'
+  - name: git-clone
+    description: Clone this repository into C:\workspaces
+    parameters:
+      repositoryUrl: https://github.com/MattLeach25/gitops.git
+      directory: C:\workspaces
+      pat: "{{https://devboxkv01.vault.azure.net/secrets/teamcust}}"
+      
+
 
